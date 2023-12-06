@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="js/cadastro.js" defer></script>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="menu">
+                <!-- Botão de login será adicionado ou removido dinamicamente pelo JavaScript -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Cadastre-se</h1>
+        <form onsubmit="cadastrarUsuario(); return false;">
+            <label for="newUsername">Novo Usuário:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+
+            <label for="newEmail">Email:</label>
+            <input type="email" id="newEmail" name="newEmail" required>
+
+            <label for="newPassword">Nova Senha:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </main>
+</body>
+</html>

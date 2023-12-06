@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #e50914; /* cor vermelha semelhante ao Netflix */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; /* Removendo a margem padrão da lista */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+ul li a:hover {
+    background-color: #e50914;
+}
+
+main {
+    padding: 2rem;
+}
+
+#menu {
+    margin-right: 2rem;
+}
+
+#welcomeMessage {
+    display: none;
+    font-weight: bold;
+}
+
+.cartazes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Adicionando regras de mídia para tornar o site responsivo */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Altera o layout para uma coluna em telas menores */
+        align-items: flex-start; /* Alinha os itens à esquerda */
+    }
+
+    ul {
+        margin-top: 1rem; /* Adiciona um espaçamento superior na lista */
+    }
+
+    #menu {
+        margin: 0; /* Remove a margem direita do menu */
+    }
+
+    .cartazes-container {
+        justify-content: flex-start; /* Alinha os cartazes à esquerda em telas menores */
+    }
+}
+
+.cartazes-container img {
+    border: 1px solid #e50914;
+}

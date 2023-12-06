@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixFinder - Encontre seus filmes favoritos</title>
+    <link rel="stylesheet" href="css/favoritos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FlixFinder</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+        </nav>
+    </header>
+
+    <div class="container">
+        <header class="header">
+            <h1>Pesquise um Filme ou Pessoa</h1>
+            <input type="text" id="termoBusca" placeholder="Digite o nome do filme">
+            <button onclick="pesquisarFilmes(document.getElementById('termoBusca').value)">Pesquisar Filme</button>
+            <input type="text" id="termoBuscaPessoa" placeholder="Digite o nome do ator/atriz/diretor">
+            <button onclick="pesquisarPessoas(document.getElementById('termoBuscaPessoa').value)">Pesquisar Pessoa</button>
+        </header>
+
+        <div id="msg" class="message"></div>
+
+        <section class="section" id="resultados">
+            <h2>Resultados da Pesquisa</h2>
+            <table id="lista-filmes" class="table">
+                <thead>
+                    <tr>
+                        <th>Nome do Filme</th>
+                        <th>Gêneros</th>
+                        <th>Línguas</th>
+                        <th>Nota TMDb</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Resultados da pesquisa serão inseridos aqui -->
+                </tbody>
+            </table>
+        </section>
+
+        <section class="section" id="favoritos">
+            <h2>Filmes Favoritos</h2>
+            <input type="text" id="termoBuscaFavoritos" placeholder="Pesquisar nos favoritos">
+            <button onclick="pesquisarFavoritos(document.getElementById('termoBuscaFavoritos').value)">Pesquisar nos Favoritos</button>
+            <table id="lista-favoritos" class="table">
+                <thead>
+                    <tr>
+                        <th>Nome do Filme</th>
+                        <th>Gêneros</th>
+                        <th>Línguas</th>
+                        <th>Nota TMDb</th>
+                        <th>Sua Avaliação</th>
+                        <th>Comentário</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Filmes favoritos serão inseridos aqui -->
+                </tbody>
+            </table>
+        </section>
+
+        <div id="modal-filme" class="modal">
+            <div class="modal-content">
+                <h4>Adicionar Filme aos Favoritos</h4>
+                <p>Nome do Filme: <span id="modal-titulo-filme"></span></p>
+                <input type="hidden" id="filmeId">
+                <input type="hidden" id="generosFilme">
+                <input type="hidden" id="linguasFilme">
+
+                <div>
+                    <label for="notaUsuario">Sua Nota (0 a 5):</label>
+                    <input type="number" id="notaUsuario" min="0" max="5">
+                </div>
+                <div>
+                    <label for="comentarioUsuario">Seu Comentário:</label>
+                    <textarea id="comentarioUsuario"></textarea>
+                </div>
+                <button id="btnSalvarFavorito" onclick="salvarFavorito()">Salvar Filme</button>
+                <button onclick="fecharModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/favoritos.js"></script>
+</body>
+</html>

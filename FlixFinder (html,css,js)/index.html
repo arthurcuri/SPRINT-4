@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js" defer></script>
+    <script src="js/recomendador.js" defer></script>
+    <script src="js/cadastro.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/filtros.js" defer></script>
+    <link rel="stylesheet" href="css/home.css">
+    <title>FlixFinder</title>
+</head>
+<body>
+    <header>
+        <h1>FlixFinder</h1>
+        <nav>
+            <ul id="menu">
+                <!-- Botão de login será adicionado ou removido dinamicamente pelo JavaScript -->
+                <li><a href="favoritos.html" onclick="verificarLogin()">Favoritos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+            <div id="welcomeMessage" style="display:none;"></div>
+        </nav>
+    </header>
+    <main>
+        <div id="recomendacoes" class="cartazes-container"></div>
+        <div id="detalhesModal" class="modal">
+            <!-- Conteúdo do modal -->
+        </div>
+        <div>
+            <label for="plataforma">Selecione a plataforma:</label>
+            <input type="checkbox" id="netflix" name="plataforma" value="netflix">
+            <label for="netflix">Netflix</label>
+            <input type="checkbox" id="primevideo" name="plataforma" value="primevideo">
+            <label for="primevideo">Prime Video</label>
+            <input type="checkbox" id="disneyplus" name="plataforma" value="disneyplus">
+            <label for="disneyplus">Disney+</label>
+        </div>
+    </main>
+</body>
+</html>
